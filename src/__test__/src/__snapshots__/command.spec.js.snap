@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`command code emitter should emit 'assert selected label' command 1`] = `"$i->seeOptionIsSelected(WebDriverBy::id('test'), 'test');"`;
+
+exports[`command code emitter should emit 'verify selected label' command 1`] = `"$i->seeOptionIsSelected(WebDriverBy::id('test'), 'test');"`;
+
+exports[`command code emitter should emit \`add selection\` command 1`] = `"$i->selectOption(WebDriverBy::cssSelector('select'), WebDriverBy::xpath('//option[. = \\"A label\\"]'));"`;
+
+exports[`command code emitter should emit \`answer on visible prompt\` command 1`] = `
+"$i->typeInPopup('an answer');
+$i->acceptPopup();"
+`;
+
+exports[`command code emitter should emit \`assert alert\` command 1`] = `"$i->seeInPopup('an alert');"`;
+
+exports[`command code emitter should emit \`assert checked\` command 1`] = `"$i->seeCheckboxIsChecked(WebDriverBy::id('check'));"`;
+
+exports[`command code emitter should emit \`assert confirmation\` command 1`] = `"$i->seeInPopup('a confirmation');"`;
+
+exports[`command code emitter should emit \`assert editable\` command 1`] = `
+"$element = null;
+$i->executeInSelenium(function (RemoteWebDriver $driver) use (&$element) {
+    $element = $driver->findElement(WebDriverBy::id('text'));
+});
+$i->assertTrue($element->isEnabled());"
+`;
+
+exports[`command code emitter should emit \`assert element not present\` command 1`] = `"$i->dontSeeElementInDOM(WebDriverBy::id('element'));"`;
+
+exports[`command code emitter should emit \`assert element present\` command 1`] = `"$i->seeElementInDOM(WebDriverBy::id('element'));"`;
+
+exports[`command code emitter should emit \`assert not checked\` command 1`] = `"$i->dontSeeCheckboxIsChecked(WebDriverBy::id('check'));"`;
+
+exports[`command code emitter should emit \`assert not editable\` command 1`] = `
+"$element = null;
+$i->executeInSelenium(function (RemoteWebDriver $driver) use (&$element) {
+    $element = $driver->findElement(WebDriverBy::id('text'));
+});
+$i->assertFalse($element->isEnabled());"
+`;
+
+exports[`command code emitter should emit \`assert not selected value\` command 1`] = `"$i->seeOptionIsNotSelected(WebDriverBy::id('select'), test);"`;
+
+exports[`command code emitter should emit \`assert not text\` command 1`] = `"$i->dontSee(text, WebDriverBy::id('test'));"`;
+
+exports[`command code emitter should emit \`assert prompt\` command 1`] = `"$i->seeInPopup('a prompt');"`;
+
+exports[`command code emitter should emit \`assert selected value\` command 1`] = `"$i->seeElement(WebDriverBy::id('select'), ['value' => 'test']);"`;
+
+exports[`command code emitter should emit \`assert text\` command 1`] = `"$i->see(some text that should be here, WebDriverBy::id('test'));"`;
+
+exports[`command code emitter should emit \`assert title\` command 1`] = `"$i->seeInTitle('example title');"`;
+
+exports[`command code emitter should emit \`assert value\` command 1`] = `"$i->seeElement(WebDriverBy::id('select'), ['value' => 'test']);"`;
+
+exports[`command code emitter should emit \`assert\` command 1`] = `"$i->assertEquals($this->vars['varrrName'], 'blah');"`;
+
+exports[`command code emitter should emit \`check\` command 1`] = `"$i->checkOption(WebDriverBy::id('f'));"`;
+
+exports[`command code emitter should emit \`choose cancel on visible prompt\` command 1`] = `"$i->cancelPopup();"`;
+
+exports[`command code emitter should emit \`choose ok on visible confirmation\` command 1`] = `"$i->acceptPopup();"`;
+
+exports[`command code emitter should emit \`click at\` command 1`] = `"$i->click(WebDriverBy::linkText('button'));"`;
+
+exports[`command code emitter should emit \`click\` command 1`] = `"$i->click(WebDriverBy::linkText('button'));"`;
+
+exports[`command code emitter should emit \`close\` command 1`] = `"$i->closeTab();"`;
+
+exports[`command code emitter should emit \`do\` command 1`] = `
+Object {
+  "body": "do {",
+  "endingLevel": 1,
+}
+`;
+
+exports[`command code emitter should emit \`double click at\` command 1`] = `"$i->doubleClick(WebDriverBy::linkText('button'));"`;
+
+exports[`command code emitter should emit \`double click\` command 1`] = `"$i->doubleClick(WebDriverBy::linkText('button'));"`;
+
+exports[`command code emitter should emit \`drag and drop to object\` command 1`] = `"$i->dragAndDrop(WebDriverBy::linkText('dragged'), WebDriverBy::linkText('dropped'));"`;
+
+exports[`command code emitter should emit \`echo\` command 1`] = `"codecept_debug('blah')"`;
+
+exports[`command code emitter should emit \`echo\` command with variables 1`] = `"codecept_debug($this->vars['blah'])"`;
+
+exports[`command code emitter should emit \`edit content\` command 1`] = `
+"$element = null;
+$i->executeInSelenium(function (RemoteWebDriver $driver) use (&$element) {
+    $element = $driver->findElement(WebDriverBy::id('contentEditable'))
+});
+$i->executeJS('if(arguments[0].contentEditable === true) {arguments[0].innerText = \\"<button>test</button>\\"}', [$element]);"
+`;
+
+exports[`command code emitter should emit \`else if\` command 1`] = `
+Object {
+  "body": "} elseif (!![object Promise]) {",
+  "endingLevel": 1,
+}
+`;
+
+exports[`command code emitter should emit \`else\` command 1`] = `
+Object {
+  "body": "} else {",
+  "endingLevel": 1,
+}
+`;
+
+exports[`command code emitter should emit \`end\` command 1`] = `
+Object {
+  "body": "}",
+  "endingLevel": 0,
+}
+`;
+
+exports[`command code emitter should emit \`execute async script\` command 1`] = `"$this->vars['myVar'] = $i->executeAsyncJS('var callback = arguments[arguments.length - 1];javascript.then(callback).catch(callback);');;"`;
+
+exports[`command code emitter should emit \`execute script\` command 1`] = `"$this->vars['myVar'] = $i->executeJS('javascript');;"`;
+
+exports[`command code emitter should emit \`execute script\` command with return string value 1`] = `"$this->vars['myVar'] = $i->executeJS('return \\\\'a\\\\'');;"`;
+
+exports[`command code emitter should emit \`forEach\` command 1`] = `
+Object {
+  "body": "$collection = $this->vars['collection'];
+for ($c = 0; $c < count($collection) - 1; $c++) {
+    $this->vars['iteratorVar'] = $this->vars['collection'][$c];",
+  "endingLevel": 1,
+}
+`;
+
+exports[`command code emitter should emit \`if\` command 1`] = `
+Object {
+  "body": "if (!![object Promise]) {",
+  "endingLevel": 1,
+}
+`;
+
+exports[`command code emitter should emit \`mouse down at\` event 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $element = $driver->findElement(WebDriverBy::id('button'))
+    $driver->action()->moveToElement($element)->clickAndHold()->perform();
+});"
+`;
+
+exports[`command code emitter should emit \`mouse down\` command 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $element = $driver->findElement(WebDriverBy::id('button'))
+    $driver->action()->moveToElement($element)->clickAndHold()->perform();
+});"
+`;
+
+exports[`command code emitter should emit \`mouse move at\` event 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $element = $driver->findElement(WebDriverBy::id('button'));
+    $driver->action()->moveToElement($element)->perform();
+});"
+`;
+
+exports[`command code emitter should emit \`mouse out\` event 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $element = $driver->findElement(WebDriverBy::cssSelector('body'));
+    $driver->action()->moveToElement($element)->perform();
+});"
+`;
+
+exports[`command code emitter should emit \`mouse over\` event 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $element = $driver->findElement(WebDriverBy::id('button'));
+    $driver->action()->moveToElement($element)->perform();
+});"
+`;
+
+exports[`command code emitter should emit \`mouse up at\` event 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $element = $driver->findElement(WebDriverBy::id('button'));
+    $driver->action()->moveToElement($element)->release()->perform();
+});"
+`;
+
+exports[`command code emitter should emit \`mouse up\` event 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $element = $driver->findElement(WebDriverBy::id('button'));
+    $driver->action()->moveToElement($element)->release()->perform();
+});"
+`;
+
+exports[`command code emitter should emit \`open\` with absolute url 1`] = `"$i->amOnUrl('https://www.seleniumhq.org/');"`;
+
+exports[`command code emitter should emit \`pause\` command 1`] = `"$i->wait(300);"`;
+
+exports[`command code emitter should emit \`remove selection\` command 1`] = `"$i->selectOption(WebDriverBy::cssSelector('select'), WebDriverBy::xpath('//option[. = \\"A label\\"]'));"`;
+
+exports[`command code emitter should emit \`repeatIf\` command 1`] = `"} while (!![object Promise]);"`;
+
+exports[`command code emitter should emit \`run script\` command 1`] = `"$i->executeJS('alert('test');alert('Im annoying');');"`;
+
+exports[`command code emitter should emit \`run\` command 1`] = `"sometestcase();"`;
+
+exports[`command code emitter should emit \`select frame\` to select the top frame 1`] = `"$i->switchToFrame();"`;
+
+exports[`command code emitter should emit \`select window\` to select a window by handle 1`] = `"$i->switchToWindow($this->vars['window']);"`;
+
+exports[`command code emitter should emit \`select window\` to select a window by implicit index 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $driver->switchTo()->window($driver->getWindowHandles()[12]);
+});"
+`;
+
+exports[`command code emitter should emit \`select window\` to select a window by name 1`] = `"$i->switchToWindow('window');"`;
+
+exports[`command code emitter should emit \`select window\` to select a window by the local keyword 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $driver->switchTo()->window($driver->getWindowHandles()[0])
+});"
+`;
+
+exports[`command code emitter should emit \`select\` command 1`] = `"$i->selectOption(WebDriverBy::cssSelector('select'), WebDriverBy::xpath('//option[. = \\"A label\\"]'));"`;
+
+exports[`command code emitter should emit \`send keys\` command 1`] = `"$i->pressKey(WebDriverBy::id('input'), 'example input');"`;
+
+exports[`command code emitter should emit \`send keys\` command with a key press 1`] = `"$i->pressKey(WebDriverBy::id('input'), 'SuperSecretPassword!', WebDriverKeys::ENTER);"`;
+
+exports[`command code emitter should emit \`send keys\` command with a variable input 1`] = `"$i->pressKey(WebDriverBy::id('input'), $this->vars['blah']);"`;
+
+exports[`command code emitter should emit \`set speed\` 1`] = `"codecept_debug('\\"set speed\\" is a no-op in code export, use \\"pause\\" instead');"`;
+
+exports[`command code emitter should emit \`setWindowSize\` 1`] = `"$i->resizeWindow(1440, 1177);"`;
+
+exports[`command code emitter should emit \`store attribute\` command 1`] = `
+"$attribute = null;
+$i->executeInSelenium(function (RemoteWebDriver $driver) use (&$attribute) {
+    $attribute = $driver->findElement(WebDriverBy::xpath('button[3]'))->getAttribute('id');
+});
+$this->vars['myVar'] = $attribute;"
+`;
+
+exports[`command code emitter should emit \`store json\` command 1`] = `"$this->vars['myVar'] = JSON.parse(\\"[{\\"a\\":0}]\\");"`;
+
+exports[`command code emitter should emit \`store text\` command 1`] = `
+"$text = null;
+$i->executeInSelenium(function (RemoteWebDriver $driver) use (&$text) {
+    $text = $driver->findElement(WebDriverBy::id('someElement'))->getText();
+});
+$this->vars['myVar'] = $text;"
+`;
+
+exports[`command code emitter should emit \`store title\` command 1`] = `
+"$title = null;
+$i->executeInSelenium(function (RemoteWebDriver $driver) use (&$title) {
+    $title = $driver->getTitle();
+});
+$this->vars['myVar'] = $title;"
+`;
+
+exports[`command code emitter should emit \`store value\` command 1`] = `
+"$value = null;
+$i->executeInSelenium(function (RemoteWebDriver $driver) use (&$value) {
+    $attribute = $driver->findElement(WebDriverBy::id('someElement'))->getAttribute('value');
+});
+$this->vars['myVar'] = $value;"
+`;
+
+exports[`command code emitter should emit \`store window handle\` command 1`] = `
+"$handle = null;
+$i->executeInSelenium(function (RemoteWebDriver $driver) use (&$handle) {
+    $handle = $driver->getWindowHandle();
+});
+$this->vars['windowName'] = $handle;"
+`;
+
+exports[`command code emitter should emit \`store xpath count\` command 1`] = `
+"$count = null;
+$i->executeInSelenium(function (RemoteWebDriver $driver) use (&$count) {
+    $count = count($driver->findElements(WebDriverBy::xpath('button'));
+});
+$this->vars['myVar'] = $count;"
+`;
+
+exports[`command code emitter should emit \`store\` command 1`] = `"$this->vars['myVar'] = 'some value';"`;
+
+exports[`command code emitter should emit \`submit\` command 1`] = `"throw new InvalidArgumentException('\`submit\` is not a supported command in Selenium Webdriver. Please re-record the step in the IDE.');"`;
+
+exports[`command code emitter should emit \`times\` command 1`] = `
+"$times = 5;
+for ($c = 0; $c < $times; $c++) {"
+`;
+
+exports[`command code emitter should emit \`type\` command 1`] = `"$i->pressKey(WebDriverBy::id('input'), 'example input');"`;
+
+exports[`command code emitter should emit \`uncheck\` command 1`] = `
+"{
+    $i->uncheckOption(WebDriverBy::id('f'));
+}"
+`;
+
+exports[`command code emitter should emit \`verify checked\` command 1`] = `"$i->seeCheckboxIsChecked(WebDriverBy::id('check'));"`;
+
+exports[`command code emitter should emit \`verify editable\` command 1`] = `
+"$element = null;
+$i->executeInSelenium(function (RemoteWebDriver $driver) use (&$element) {
+    $element = $driver->findElement(WebDriverBy::id('text'));
+});
+$i->assertTrue($element->isEnabled());"
+`;
+
+exports[`command code emitter should emit \`verify element not present\` command 1`] = `"$i->dontSeeElementInDOM(WebDriverBy::id('element'));"`;
+
+exports[`command code emitter should emit \`verify element present\` command 1`] = `"$i->seeElementInDOM(WebDriverBy::id('element'));"`;
+
+exports[`command code emitter should emit \`verify not checked\` command 1`] = `"$i->dontSeeCheckboxIsChecked(WebDriverBy::id('check'));"`;
+
+exports[`command code emitter should emit \`verify not editable\` command 1`] = `
+"$element = null;
+$i->executeInSelenium(function (RemoteWebDriver $driver) use (&$element) {
+    $element = $driver->findElement(WebDriverBy::id('text'));
+});
+$i->assertFalse($element->isEnabled());"
+`;
+
+exports[`command code emitter should emit \`verify not selected value\` command 1`] = `"$i->seeOptionIsNotSelected(WebDriverBy::id('select'), test);"`;
+
+exports[`command code emitter should emit \`verify not text\` command 1`] = `"$i->dontSee(text, WebDriverBy::id('test'));"`;
+
+exports[`command code emitter should emit \`verify selected value\` command 1`] = `"$i->seeElement(WebDriverBy::id('select'), ['value' => 'test']);"`;
+
+exports[`command code emitter should emit \`verify text\` command 1`] = `"$i->see(some text that should be here, WebDriverBy::id('test'));"`;
+
+exports[`command code emitter should emit \`verify title\` command 1`] = `"$i->seeInTitle('example title');"`;
+
+exports[`command code emitter should emit \`verify value\` command 1`] = `"$i->seeElement(WebDriverBy::id('select'), ['value' => 'test']);"`;
+
+exports[`command code emitter should emit \`verify\` command 1`] = `"$i->assertEquals($this->vars['varrrName'], 'blah');"`;
+
+exports[`command code emitter should emit \`waitForElementEditable\` command 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $element = $driver->findElement(WebDriverBy::cssSelector('#blah'));
+    $driver->wait(5000)->until(function () use ($element) { return $element->isEnabled(); });
+});"
+`;
+
+exports[`command code emitter should emit \`waitForElementNotEditable\` command 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $element = $driver->findElement(WebDriverBy::cssSelector('#blah'));
+    $driver->wait(5000)->until(function () use ($element) { return !$element->isEnabled(); });
+});"
+`;
+
+exports[`command code emitter should emit \`waitForElementNotPresent\` command 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $element = $driver->findElement(WebDriverBy::cssSelector('#blah'));
+    $driver->wait(5000)->until(WebDriverExpectedCondition::stalenessOf($element));
+});"
+`;
+
+exports[`command code emitter should emit \`waitForElementNotVisible\` command 1`] = `"$i->waitForElementNotVisible(WebDriverBy::cssSelector('#blah'));, 5000);"`;
+
+exports[`command code emitter should emit \`waitForElementPresent\` command 1`] = `"$i->waitForElement(WebDriverBy::cssSelector('#blah')), 5000)"`;
+
+exports[`command code emitter should emit \`waitForElementVisible\` command 1`] = `"$i->waitForElementVisible(WebDriverBy::cssSelector('#blah'));, 5000);"`;
+
+exports[`command code emitter should emit \`waitForText\` command 1`] = `"$i->waitForText(WebDriverBy::cssSelector('#blah'), 30000, 'text');"`;
+
+exports[`command code emitter should emit \`while\` command 1`] = `"while (!![object Promise]) {"`;
+
+exports[`command code emitter should emit new window handling, if command opens a new window 1`] = `
+"$i->executeInSelenium(function (RemoteWebDriver $driver) {
+    $this->vars['windowHandles'] = 'windowHandles';
+});
+[object Promise]
+$this->vars['newWin'] = 'newWin';"
+`;
