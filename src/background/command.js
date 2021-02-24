@@ -936,13 +936,15 @@ async function emitVerifyNotSelectedValue(locator, expectedValue) {
   return Promise.resolve(
     `$i->seeOptionIsNotSelected(${await location.emit(
       locator
-    )}, ${exporter.emit.text(expectedValue)});`
+    )}, '${exporter.emit.text(expectedValue)}');`
   )
 }
 
 async function emitVerifyNotText(locator, text) {
   return Promise.resolve(
-    `$i->dontSee(${exporter.emit.text(text)}, ${await location.emit(locator)});`
+    `$i->dontSee('${exporter.emit.text(text)}', ${await location.emit(
+      locator
+    )});`
   )
 }
 
@@ -954,7 +956,7 @@ async function emitVerifySelectedLabel(locator, labelValue) {
 
 async function emitVerifyText(locator, text) {
   return Promise.resolve(
-    `$i->see(${exporter.emit.text(text)}, ${await location.emit(locator)});`
+    `$i->see('${exporter.emit.text(text)}', ${await location.emit(locator)});`
   )
 }
 
