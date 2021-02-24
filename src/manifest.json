@@ -2,15 +2,12 @@
   "description": "Adds export to PHP Codeception to Selenium IDE",
   "manifest_version": 2,
   "name": "Selenium IDE PHP Codeception Export",
-  "version": "1.0.0",
-  "homepage_url": "https://github.com/SeleniumHQ/selenium-ide/tree/master/packages/extension-boilerplate",
+  "version": "1.0.1",
+  "homepage_url": "https://github.com/cl1ck/selenium-ide-code-export-php-codeception",
   "permissions": [],
   "content_security_policy": "script-src 'self'; object-src 'self'",
   "externally_connectable": {
-    "ids": [
-      "mooikfkahbdckldjjndioackbalphokd",
-      "{a6fd85ed-e919-4a43-a5af-8da18bda539f}"
-    ],
+    "ids": ["*"],
     "accepts_tls_channel_id": false
   },
   "background":

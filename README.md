@@ -41,3 +41,15 @@ modules:
     - Asserts
     - App\Tests\Helper\Acceptance
 ```
+
+## Build
+
+```shell
+yarn build
+```
+
+## Test
+
+```shell
+yarn test
+```

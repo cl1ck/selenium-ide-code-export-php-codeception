@@ -47,9 +47,7 @@ function afterAll() {
       commands: [{ level: 0, statement: 'public function _afterSuite() {' }],
     },
     endingSyntax: {
-      commands: [
-        { level: 0, statement: '}' },
-      ],
+      commands: [{ level: 0, statement: '}' }],
     },
     registrationLevel: 1,
   }
@@ -64,9 +62,7 @@ function afterEach() {
       ],
     },
     endingSyntax: {
-      commands: [
-        { level: 0, statement: '}' },
-      ],
+      commands: [{ level: 0, statement: '}' }],
     },
   }
 }
@@ -77,9 +73,7 @@ function beforeAll() {
       commands: [{ level: 0, statement: 'public function _initialize() {' }],
     },
     endingSyntax: {
-      commands: [
-        { level: 0, statement: '}' },
-      ],
+      commands: [{ level: 0, statement: '}' }],
     },
     registrationLevel: 1,
   }
@@ -87,7 +81,7 @@ function beforeAll() {
 
 function beforeEach() {
   return {
-    startingSyntax: ({ browserName, gridUrl } = {}) => ({
+    startingSyntax: () => ({
       commands: [
         {
           level: 0,
@@ -96,9 +90,7 @@ function beforeEach() {
       ],
     }),
     endingSyntax: {
-      commands: [
-        { level: 0, statement: '}' },
-      ],
+      commands: [{ level: 0, statement: '}' }],
     },
   }
 }
@@ -108,8 +100,6 @@ function declareDependencies() {
     startingSyntax: {
       commands: [
         { level: 0, statement: '<?php' },
-        { level: 0, statement: '' },
-        { level: 0, statement: '/** phpcs:ignoreFile */' },
         { level: 0, statement: '' },
         { level: 0, statement: 'declare(strict_types=1);' },
         { level: 0, statement: '' },
